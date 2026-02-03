@@ -7,3 +7,6 @@ asyncio
 speedtest-cli
 psutil
 pytz
+flask
+
+
