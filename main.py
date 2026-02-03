@@ -2,26 +2,26 @@ import os
 from threading import Thread
 from flask import Flask
 
-from app import app as bot_app
+from app import app as bot_app   # 🔥 bot app ko rename kiya
 from utils import LOGGER
 from core import start_message
 from core.mongo import MONGO_CLIENT 
 
-# Fake Web Server (Render ke liye)
-web = Flask(__name__)
+# Flask web server (Render ke liye)
+web_app = Flask(__name__)
 
-@web.route("/")
+@web_app.route("/")
 def home():
     return "Bot is running!"
 
 def run_web():
     port = int(os.environ.get("PORT", 10000))
-    web.run(host="0.0.0.0", port=port)
+    web_app.run(host="0.0.0.0", port=port)
 
 if __name__ == "__main__":
-    LOGGER.info("Bot Successfully Started! ")
+    LOGGER.info("Bot Successfully Started!")
 
-    # Web server start (Render ke liye)
+    # Flask server start (Render port binding)
     Thread(target=run_web).start()
 
     # Telegram bot start
