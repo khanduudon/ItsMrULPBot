@@ -8,5 +8,6 @@ speedtest-cli
 psutil
 pytz
 flask
+pyrogram
 
 
