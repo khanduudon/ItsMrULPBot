@@ -10,8 +10,9 @@ COMMAND_PREFIX = [",", ".", "/", "!"]
 DEVELOPER_ID = 7995790656  # Replace with the developer's actual user ID
 UPDATES_CHANNEL = "https://t.me/sujalupdate"  # URL of the updates channel
 
-ADMIN_IDS = [FIRST_ADMIN_ID, SECOND_ADMIN_ID]
+ADMIN_IDS = [7995790656, 8101299417]
 
 # MongoDB configuration
-MONGO_URL = "YOUR_MONGO_URL"
+MONGO_URL = "mongodb+srv://sujalbot:sujalbot@cluster0.mnjoqfu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
 
